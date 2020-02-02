@@ -67,6 +67,10 @@ export default ({ activeUrl, heroFullscreen }) => {
           border-bottom: 1px solid rgba(0, 0, 0, .1);
           font-weight: bold;
         }
+        nav a.active {
+          color: #43cbcb;
+          background: #fff;
+        }
         button {
           appearance: none;
           background: #43cbcb;
@@ -89,6 +93,13 @@ export default ({ activeUrl, heroFullscreen }) => {
         }
         button em:first-child {margin-top:0;}
         button em:last-child {margin-bottom:0;}
+        
+        nav a[href="/contact"].active,
+        nav a[href="/contact"] {
+          border: 3px solid;
+          margin: 10px;
+          border-radius: 4px;
+        }
         
         @media (min-width:${minWidth}) {
           div > a img {
@@ -116,6 +127,7 @@ export default ({ activeUrl, heroFullscreen }) => {
           }
           nav a.active {
             color: #43cbcb;
+            background: transparent;
           }
           .hero-fullscreen nav a.active {
             background: #fff;
@@ -126,12 +138,13 @@ export default ({ activeUrl, heroFullscreen }) => {
           }
           nav a[href="/contact"].active,
           nav a[href="/contact"] {
+            border: none;
             background: #43cbcb;
             color: #ffffff;
             border-radius: 50px;
             padding: 7px 30px;
             box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.15);
-            margin-left: 20px;
+            margin: 0 0 0 20px;
           }
         }
       `}</style>
