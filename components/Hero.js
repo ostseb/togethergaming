@@ -26,7 +26,7 @@ export default ({ content, media, fullscreen = false }) => (
         align-items: flex-start;
         background-size: cover;
         background-position: center right;
-        ${media && `background-image: url(${getImage(media, 'q=75&w=500')});`}
+        ${media && `background-image: url(${getImage(media, 'q=75&h=400')});`}
       }
       .Hero.fullscreen {
         margin-top: -122px;

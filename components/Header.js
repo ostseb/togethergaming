@@ -5,10 +5,10 @@ import { minWidth } from '../utils'
 export default ({ activeUrl, heroFullscreen }) => {
   const [ isOpen, toggle ] = useState(false)
   return (
-    <div className={`container ${heroFullscreen && 'hero-fullscreen'}`}>
+    <div className={`container ${isOpen && 'open'} ${heroFullscreen && 'hero-fullscreen'}`}>
       <Link href="/"><a><img alt="Together Gaming Logo" src="/tg-logo.png" /></a></Link>
       <button onClick={() => toggle(!isOpen)}><em></em><em>Menu</em><em></em></button>
-      <nav className={isOpen ? 'open' : null}>
+      <nav>
         <Link href="/"><a onClick={() => toggle(false)} className={activeUrl === '/' && 'active'}>Home</a></Link>
         <Link href="/platform"><a onClick={() => toggle(false)} className={activeUrl === 'platform' && 'active'}>Platform</a></Link>
         <Link href="/ir"><a onClick={() => toggle(false)} className={activeUrl === 'ir' && 'active'}>Investors</a></Link>
@@ -29,6 +29,8 @@ export default ({ activeUrl, heroFullscreen }) => {
         
         div > a {
           display: inline-block;
+          z-index: 1;
+          position: relative;
         }
         
         div > a img {
@@ -36,17 +38,19 @@ export default ({ activeUrl, heroFullscreen }) => {
           padding: 5px;
         }
         
+        div.open > a img,
         div.hero-fullscreen > a img {
           filter: brightness(255)
         }
         
-        nav.open {
+        div.open nav {
           display: block;
         }
         nav {
           display: none;
           position: fixed;
-          top: 122px;
+          padding-top: 122px;
+          top: 0;
           left: 0;
           right: 0;
           bottom: 0;
@@ -69,6 +73,8 @@ export default ({ activeUrl, heroFullscreen }) => {
           border: 0;
           padding: 5px;
           outline: none;
+          z-index: 1;
+          position: relative;
         }
 
         button em {
