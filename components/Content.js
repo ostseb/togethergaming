@@ -1,9 +1,16 @@
 import { renderRichFormat } from '../utils'
 
-export default ({ content }) => (
-  <>
-    <div className="container">
-      { renderRichFormat(content) }
-    </div>
-  </>
+export default ({ content, type, createdAt }) => (
+  <div className="container">
+    { type && type.includes('blogEntry') && <time dateTime={createdAt}>{ Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeStyle: 'short'}).format(new Date(createdAt)) }</time> }
+    { renderRichFormat(content) }
+    <style jsx>{`
+      time {
+        transform: translateY(1.3rem);
+        display: block;
+        font-style: italic;
+        font-size: 14px;
+      }
+    `}</style>
+  </div>
 )
