@@ -170,6 +170,11 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           padding: 0;
           list-style: none;
         }
+        
+        .contact-section-grid-box-background li > p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       `}</style>
     </>
   )
