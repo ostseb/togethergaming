@@ -101,6 +101,7 @@ export default ({ activeUrl, heroFullscreen }) => {
             display: block;
             position: static;
             top: auto;
+            padding-top: 0;
             left: auto;
             right: auto;
             bottom: auto;
