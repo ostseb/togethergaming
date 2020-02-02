@@ -14,6 +14,7 @@ export default ({ activeUrl, heroFullscreen }) => {
         <Link href="/ir"><a onClick={() => toggle(false)} className={activeUrl === 'ir' && 'active'}>Investors</a></Link>
         <Link href="/governance"><a onClick={() => toggle(false)} className={activeUrl === 'governance' && 'active'}>Governance</a></Link>
         <Link href="/press"><a onClick={() => toggle(false)} className={activeUrl === 'press' && 'active'}>Press</a></Link>
+        <Link href="/contact"><a onClick={() => toggle(false)} className={activeUrl === 'contact' && 'active'}>Contact</a></Link>
       </nav>
       <style jsx>{`
         .hero-fullscreen {
@@ -64,7 +65,6 @@ export default ({ activeUrl, heroFullscreen }) => {
           color: #fff;
           text-decoration: none;
           border-bottom: 1px solid rgba(0, 0, 0, .1);
-          font-size: 18px;
           font-weight: bold;
         }
         button {
@@ -119,6 +119,19 @@ export default ({ activeUrl, heroFullscreen }) => {
           }
           .hero-fullscreen nav a.active {
             background: #fff;
+          }
+          .hero-fullscreen nav a[href="/contact"] {
+            background: #fff;
+            color: #43cbcb;
+          }
+          nav a[href="/contact"].active,
+          nav a[href="/contact"] {
+            background: #43cbcb;
+            color: #ffffff;
+            border-radius: 50px;
+            padding: 7px 30px;
+            box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.15);
+            margin-left: 20px;
           }
         }
       `}</style>

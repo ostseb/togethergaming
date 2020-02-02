@@ -51,9 +51,9 @@ export const getImage = (media, query = null) => {
 
 const richFormatOptions = {
   renderNode: {
-    [BLOCKS.HEADING_1]: node => {
+    [BLOCKS.HEADING_1]: (node, children) => {
       const { value } = node.content[0]
-      return <h1 id={slugify(value, {lower:true})}>{ value }</h1>
+      return <h1 id={slugify(value, {lower:true})}>{ children }</h1>
     },
     [BLOCKS.EMBEDDED_ENTRY]: node => {
       const { content, identifier } = node.data.target.fields || {}

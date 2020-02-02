@@ -74,6 +74,7 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
         }
         * {box-sizing: border-box;}
         p:empty {display:none;}
+        ul li p {margin: 0;}
         .container {
           max-width: 850px;
           width: 100%;
@@ -107,6 +108,9 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           flex-wrap: wrap;
           justify-content: space-between;
         }
+        [class*="-box"]>.container h2 {
+          margin-top: 0;
+        }
         [class*="-grid"] > .container h2 {
           min-width: 100%;
         }
@@ -136,6 +140,10 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           padding: 25px 0;
         }
         
+        .Sections > div .container h2:first-of-type {
+          margin-top: 0;
+        }
+        
         
         .Sections>.index-section-header {padding-bottom:0;}
         .Sections>.index-section-solutions-grid-box {padding-top:0;}
@@ -146,15 +154,21 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           margin: 20px 20px 0;
         }
         
-        .governance-board-section-grid-3 > div > div {
+        .governance-board-section-background-grid-3 > div > div {
           text-align: center;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: space-between;
         }
-        .governance-board-section-grid-3 > div > div img {
+        .governance-board-section-background-grid-3 > div > div img {
           max-width: 70%;
+        }
+        
+        .contact-section-grid-box-background ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
         }
       `}</style>
     </>
