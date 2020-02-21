@@ -50,6 +50,11 @@ export const getImage = (media, query = null) => {
 }
 
 const richFormatOptions = {
+  renderText: text => {
+    return text.split('\n').reduce((children, textSegment, index) => {
+      return [...children, index > 0 && <br key={index} />, textSegment];
+    }, []);
+  },
   renderNode: {
     [BLOCKS.HEADING_1]: (node, children) => {
       const { value } = node.content[0]

@@ -148,10 +148,18 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
         .Sections>.index-section-header {padding-bottom:0;}
         .Sections>.index-section-solutions-grid-box {padding-top:0;}
 
-        .index-section-partners-wide-center img {
-          max-height: 100px;
-          max-width: 150px;
-          margin: 20px 20px 0;
+        .index-section-partners-wide-center-background .container {
+          display: flex;
+          align-items: center;
+          overflow: auto;
+          padding: 0;
+          scroll-snap-type: x mandatory;
+        }
+
+        .index-section-partners-wide-center-background img {
+          width: 12.5%;
+          padding: 0 20px;
+          scroll-snap-align: start;
         }
         
         .governance-board-section-background-grid-3 > div > div {

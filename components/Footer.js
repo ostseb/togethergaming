@@ -23,7 +23,7 @@ export default () => (
             const _body = e.target.elements['body'].value
             const subject = 'Hello TG!'
             const body = encodeURIComponent(_body + '\n\n\nFrom: ' + _from)
-            window.open(`mailto:info@togethergaming.com?body=${body}&subject=${subject}`)
+            window.open(`mailto:sales@togethergaming.com?body=${body}&subject=${subject}`)
           }}>
             <label htmlFor="message-from">E-mail</label>
             <input id="message-from" name="from" type="email" />
@@ -48,7 +48,6 @@ export default () => (
         color: #fff;
         background: #43cbcb;
         overflow: hidden;
-        margin-top: 75px;
       }
       nav {
         text-align: center;
