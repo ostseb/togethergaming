@@ -12,8 +12,6 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
     <>
       <Head>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
-        
-        <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap" rel="stylesheet" />
         { post && <title>{ post.fields.title }</title> }
         { post && <meta name="description" content={ post.fields.description } /> }
         
@@ -212,6 +210,7 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           line-height: 1em;
         }
       `}</style>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap" rel="stylesheet" />
     </>
   )
 }
