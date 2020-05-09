@@ -118,7 +118,7 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           min-width: 100%;
           flex: 1;
         }
-        [class*="-grid-box"] > .container div {
+        [class*="-box"] > .container div {
           padding: 20px;
           background: #fff;
           margin: 10px 0;
@@ -131,6 +131,11 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           [class*="-grid-3"] > .container > div {
             min-width: 30%;
           }
+          [class*="-grid-4"] > .container > div {
+            min-width: 25%;
+          }
+          [class*="-grid-4-box"] > .container div,
+          [class*="-grid-3-box"] > .container div,
           [class*="-grid-box"] > .container div {
             margin: 10px;
           }
@@ -158,6 +163,7 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
 
         .index-section-partners-wide-center-background img {
           width: 12.5%;
+          min-width: 140px;
           padding: 0 20px;
           scroll-snap-align: start;
         }
@@ -182,6 +188,28 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
         .contact-section-grid-box-background li > p {
           overflow: hidden;
           text-overflow: ellipsis;
+        }
+        
+        .platform-front-end-section-our-work-grid-3-box-background-wide h2,
+        .platform-front-end-section-our-work-grid-3-box-background-wide h3,
+        .platform-front-end-section-our-work-grid-3-box-background-wide h4 {
+          margin-bottom: 0;
+        }
+        .platform-front-end-section-our-work-grid-3-box-background-wide img {
+          height: 200px;
+          width: 100%;
+          object-fit: cover;
+        }
+        .platform-front-end-section-our-work-grid-3-box-background-wide ul {
+          margin: 0;
+          padding: 0;
+          font-size: .7em;
+          display: inline-block;
+        }
+        .platform-front-end-section-our-work-grid-3-box-background-wide ul li {
+          display: inline-block;
+          margin: 0 10px 0 0;
+          line-height: 1em;
         }
       `}</style>
     </>

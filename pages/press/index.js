@@ -3,7 +3,7 @@ import { getPost, renderRichFormat, getBlogPosts, getImage } from '../../utils'
 import Link from 'next/link'
 import { useState } from 'react'
 const l = 8;
-const Card = ({ media, content, url, createdAt }) => {
+const Card = ({ media, content, url, focus = 'faces', createdAt }) => {
   const plainText = renderRichFormat(content, true).substr(0,140)
   return (
     <Link href={url}>
@@ -32,7 +32,7 @@ const Card = ({ media, content, url, createdAt }) => {
           
           .Card header {
             padding-bottom: 60%;
-            ${media && `background-image: url(${getImage(media, 'fm=jpg&q=75&w=300')});`}
+            ${media && `background-image: url(${getImage(media, `fm=jpg&q=85&w=300&h=200&f=${focus}&fit=thumb`)});`}
             background-size: 150%;
             background-position: center center;
           }
@@ -48,12 +48,14 @@ const Card = ({ media, content, url, createdAt }) => {
             padding: 10px 0;
             background: #43cbcb;
             color: #fff;
+            margin-top: auto;
           }
           
           time {
             display: block;
             font-style: italic;
             margin-bottom: 5px;
+            font-size: .8em;
           }
         `}</style>
       </div>
@@ -80,6 +82,7 @@ const Page = ({ blogPosts, p, ...rest}) => {
             createdAt={s.sys.createdAt} 
             content={s.fields.content} 
             url={s.fields.url} 
+            focus={s.fields.focus} 
           />)
         )}
       </div>  

@@ -93,7 +93,7 @@ const richFormatOptions = {
 
 export const renderRichFormat = (content, plain = false) => 
   plain 
-    ? documentToPlainTextString(content, richFormatOptions)
+    ? documentToPlainTextString(content)
     : documentToReactComponents(content, richFormatOptions)
   
 export const maxWidth = '991px'
