@@ -151,7 +151,8 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
         .Sections>.index-section-header {padding-bottom:0;}
         .Sections>.index-section-solutions-grid-box {padding-top:0;}
 
-        .index-section-partners-wide-center-background .container {
+        .index-section-partners-wide-center-background .container,
+        .index-section-wl-partners-wide-center-background .container {
           display: flex;
           align-items: center;
           overflow: auto;
@@ -159,7 +160,8 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           scroll-snap-type: x mandatory;
         }
 
-        .index-section-partners-wide-center-background img {
+        .index-section-partners-wide-center-background img,
+        .index-section-wl-partners-wide-center-background img {
           width: 12.5%;
           min-width: 140px;
           padding: 0 20px;
