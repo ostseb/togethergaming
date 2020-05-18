@@ -160,6 +160,16 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           scroll-snap-type: x mandatory;
         }
 
+        .index-section-partners-wide-center-background .container::-webkit-scrollbar, 
+        .index-section-wl-partners-wide-center-background .container::-webkit-scrollbar {
+          display: none;
+        }
+        
+        .index-section-partners-wide-center-background .container,
+        .index-section-wl-partners-wide-center-background .container {
+          -ms-overflow-style: none;
+        }
+
         .index-section-partners-wide-center-background img,
         .index-section-wl-partners-wide-center-background img {
           width: 12.5%;

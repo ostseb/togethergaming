@@ -32,7 +32,7 @@ const Card = ({ media, content, url, focus = 'faces', createdAt }) => {
           
           .Card header {
             padding-bottom: 60%;
-            ${media && `background-image: url(${getImage(media, `fm=jpg&q=85&w=300&h=200&f=${focus}&fit=thumb`)});`}
+            ${media && `background-image: url(${getImage(media, `fm=jpg&q=85&w=600&f=${focus}&fit=thumb`)});`}
             background-size: 150%;
             background-position: center center;
           }
