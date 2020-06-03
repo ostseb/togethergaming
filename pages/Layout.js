@@ -67,6 +67,8 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
         }
         h1,h2,h3,h4,h5,h6 {color:#444;}
         hr {max-width: 100px;border: 1px solid #44cbcb;margin: 2em auto;}
+        blockquote {background: #f7f7f7;padding: 1em;position: relative;}
+        blockquote:before {content: '"';position: absolute;font-size: 3em;font-style: italic;top: 0;left: 0;font-family: Georgia;color: #b1b1b1;}
         a {
           color: #43cccb;
           font-weight: 400;
