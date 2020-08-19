@@ -28,7 +28,7 @@ export const getPost = async url => {
     content_type: 'post',
     'fields.url[in]': url
   })
-  
+
   return posts[0]
 }
 
@@ -46,7 +46,11 @@ export const getBlogPosts = async (limit = 10, skip = 0) => {
 export const getImage = (media, query = null) => {
   if (!media || !media?.fields?.file)
     return null
-  return `${media?.fields?.file?.url}?${query}`
+    
+  if (query)
+    return `${media?.fields?.file?.url}?${query}`
+    
+  return media?.fields?.file?.url
 }
 
 const richFormatOptions = {

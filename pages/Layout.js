@@ -16,8 +16,10 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
         { post && <meta name="description" content={ post.fields.description } /> }
         
         { post && <meta name="og:title" content={ post.fields.title } /> }
-        { post && <meta name="og:image" content={ getImage(post?.fields?.hero?.fields?.media, 'fm=jpg&q=75&w=1080') } /> }
+        { post && <meta name="og:image" content={ getImage(post?.fields?.hero?.fields?.media) } /> }
         { post && <meta name="og:url" content={`https://www.togethergaming.com/${post.fields.url}`} /> }
+        { post?.fields?.robots && <meta name="robots" content={post.fields.robots} /> }
+
         <script dangerouslySetInnerHTML={{
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
