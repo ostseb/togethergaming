@@ -17,7 +17,7 @@ export default () => (
           <h3>Let's get together!</h3>
           <p>We'd love to hear your story and discover how we can build a winning partnership together.</p>
 
-          <form onSubmit={e => {
+          <form id="footer-contact" onSubmit={e => {
             e.preventDefault()
             const _from = e.target.elements['message-from'].value
             const _body = e.target.elements['body'].value
