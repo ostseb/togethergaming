@@ -2,6 +2,7 @@ import { createClient } from 'contentful'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
+import LazyLoad from 'react-lazyload';
 import Link from 'next/link'
 import slugify from 'slugify'
 
@@ -70,7 +71,11 @@ const richFormatOptions = {
     },
     [BLOCKS.EMBEDDED_ASSET]: node => {
       const { file, title } = node.data.target.fields || {}
-      return <img alt={title} src={file.url} />
+      return (
+        <LazyLoad>
+          <img alt={title} src={file.url} />
+        </LazyLoad>
+      )
     },
     [INLINES.EMBEDDED_ENTRY]: node => {
       const { content } = node.data.target.fields || {}
@@ -78,7 +83,11 @@ const richFormatOptions = {
     },
     [INLINES.EMBEDDED_ASSET]: node => {
       const { file, title } = node.data.target.fields || {}
-      return <img alt={title} src={file.url} />
+      return (
+        <LazyLoad>
+          <img alt={title} src={file.url} />
+        </LazyLoad>
+      )
     },
     [INLINES.ENTRY_HYPERLINK]: node => {
       const { url, title } = node.data.target.fields
