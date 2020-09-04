@@ -1,6 +1,6 @@
 import { renderRichFormat } from '../utils'
 
-export default ({ sections }) => (
+const Sections = ({ sections }) => (
   <div className="Sections">
     { sections && sections.map(section => (
       <div key={section.fields.identifier} className={`${section.fields.identifier}`}>
@@ -10,4 +10,6 @@ export default ({ sections }) => (
       </div>
     )) }
   </div>
-)
+);
+
+export default Sections;

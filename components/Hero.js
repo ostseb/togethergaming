@@ -1,6 +1,6 @@
 import { renderRichFormat, minWidth, getImage } from '../utils'
 
-export default ({ content, media, fullscreen = false }) => (
+const Hero = ({ content, media, fullscreen = false }) => (
   <div className={`Hero ${fullscreen && 'fullscreen'}`}>
     <div className="container">
       { renderRichFormat(content) }
@@ -63,4 +63,6 @@ export default ({ content, media, fullscreen = false }) => (
       }
     `}</style>
   </div>
-)
+);
+
+export default Hero;

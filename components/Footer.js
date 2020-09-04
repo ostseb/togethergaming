@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { minWidth } from '../utils'
 
-export default () => (
+const Footer = () => (
   <div className="Footer">
     <nav className="container">
       <Link href="/"><a>Home</a></Link>
@@ -113,4 +113,6 @@ export default () => (
       }
     `}</style>
   </div>
-)
+);
+
+export default Footer;

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { minWidth } from '../utils'
 
-export default ({ activeUrl, heroFullscreen }) => {
+const Header = ({ activeUrl, heroFullscreen }) => {
   const [ isOpen, toggle ] = useState(false)
   return (
     <div className={`container ${isOpen && 'open'} ${heroFullscreen && 'hero-fullscreen'}`}>
@@ -150,4 +150,6 @@ export default ({ activeUrl, heroFullscreen }) => {
       `}</style>
     </div>
   )
-}
+};
+
+export default Header;
