@@ -76,7 +76,7 @@ export default () => (
         color: #585858;
       }
       .columns .column:last-child {
-        background-image: url(/map.png);
+        background-image: url(/map.jpg);
         background-position: center center;
         background-size: cover;
         padding-bottom: 100%;
