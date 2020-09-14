@@ -106,9 +106,13 @@ const Page = ({ blogPosts, p, ...rest}) => {
 }
 
 Page.getInitialProps = async context => {
+
   const currentUrl = context.asPath !== "/" 
     ? context.asPath.match(/^\/?([^?]+)/)[1] 
     : context.asPath
+
+  if (context?.req?.method === 'HEAD')
+    return { page: null, currentUrl, blogPosts: [], p: 1 }
 
   const post = await getPost(currentUrl)
   const blogPosts = await getBlogPosts(l, 0)

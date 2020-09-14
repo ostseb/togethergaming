@@ -12,6 +12,9 @@ Page.getInitialProps = async context => {
     ? context.asPath.match(/^\/?([^?]+)/)[1] 
     : context.asPath
 
+  if (context?.req?.method === 'HEAD')
+    return { post: null, currentUrl }
+
   const post = await getPost(currentUrl)
   return { post, currentUrl }
 }
