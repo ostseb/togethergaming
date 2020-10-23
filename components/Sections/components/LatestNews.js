@@ -1,6 +1,6 @@
 import { renderComponent } from '../'
 import { renderRichFormat } from '../../../utils'
-import Link from 'next/Link'
+import Link from 'next/link'
 import Card from '../../ArticleCard'
 import Base from './Base'
 import Columns from './Columns'
