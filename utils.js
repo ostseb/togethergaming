@@ -92,14 +92,14 @@ const richFormatOptions = {
     [INLINES.ENTRY_HYPERLINK]: node => {
       const { url, title } = node.data.target.fields
       const { value } = node.content[0]
-      const link = url.match(/^[a-z]*:?\/\/.*/) ? url : `/${url}`
-      return <Link href={link}><a title={title}>{value}</a></Link>
+      const href = url.match(/^[a-z]*:?\/\/.*/) ? url : `/${url}`
+      return <Link href={href}><a title={title}>{value}</a></Link>
     },
     [INLINES.ASSET_HYPERLINK]: node => {
       const { file: { url }, title } = node.data.target.fields
       const { value } = node.content[0]
-      const link = url.match(/^[a-z]*:?\/\/.*/) ? url : `/${url}`
-      return <Link href={link}><a title={title}>{value}</a></Link>
+      const href = url.match(/^[a-z]*:?\/\/.*/) ? url : `/${url}`
+      return <Link href={href}><a title={title}>{value}</a></Link>
     },
   }
 }

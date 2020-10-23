@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import Content from '../components/Content'
 import Sections from '../components/Sections'
 
-const Layout = ({ currentUrl, post, children, ...rest }) => {
+const Layout = ({ currentUrl, post, children, blogPosts, ...rest }) => {
   if (!post) return null;
   return (
     <>
@@ -54,6 +54,7 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
       { post && (
         <Sections 
           sections={post.fields.sections}
+          blogPosts={blogPosts}
         />
       )}
       
@@ -66,6 +67,10 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           font: normal 200 normal 16px Poppins,sans-serif;
           color: #585858;
           margin: 0;
+          background: url('/tgbg.png');
+          background-position-y: 50vh;
+          background-position-x: right;
+          background-repeat: no-repeat;
         }
         h1,h2,h3,h4,h5,h6 {color:#444;}
         hr {max-width: 100px;border: 1px solid #44cbcb;margin: 2em auto;}
@@ -75,6 +80,7 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           color: #43cccb;
           font-weight: 400;
         }
+        h2:after,
         h1:after {
           content: '';
           background: #43cbcb;
@@ -94,12 +100,6 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
         }
         img {
           max-width: 100%;
-        }
-        .columns {
-          display: flex;
-        }
-        .columns .column {
-          flex: 1;
         }
         
         [class*="-center"] > .container {
@@ -135,6 +135,70 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           margin: 10px 0;
           box-shadow: 0 0 15px rgba(0,0,0,.05);
         }
+        
+        
+        .columns {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .columns > * {
+          flex: 1;
+          margin: 10px;
+        }
+        .columns > *:first-child {margin-left:0;}
+        .columns > *:last-child {margin-right:0;}
+        
+        .clients-grid {
+          flex-wrap: wrap;
+          color: #fff;
+          max-width: 1500px;
+          margin: 0 auto;
+        }
+        .clients-grid > * {max-width: 150px;margin: 50px;flex: auto;}
+        .clients-grid.columns > *:first-child {margin-left:50px;}
+        .clients-grid.columns > *:last-child {margin-right:50px;}
+        
+        .m {margin: 100px 0;}
+        .mt {margin-top: 100px;}
+        .mb {margin-bottom: 100px;}
+        
+        .box {position:relative;overflow:hidden;transition: all .2s;box-shadow: 0 0 0 0 #00000036;}
+        .box > img {width:100%;transition: all .2s;display: block;}
+        .box:hover {transform:scale(1.05);box-shadow: 0 0 20px 2px #00000036;}
+        .box:hover > img {transform:scale(1.5)}
+        .box > img + div {position:absolute;bottom:0;left:0;right:0;z-index:1;padding:20px;}
+        .box p {font-weight:100;}
+        
+        .our-offerings .box {min-width: 250px;}
+        .wl-features .box {font-size:0.85em;}
+        .blue-boxes.columns {flex-wrap:wrap;}
+        .blue-boxes .box h4,
+        .blue-boxes .box h3,
+        .blue-boxes .box h2,
+        .blue-boxes .box p {color:#fff;margin-bottom:0;}
+        .blue-boxes .box h4,
+        .blue-boxes .box h3,
+        .blue-boxes .box h2 {font-weight: normal;}
+        .blue-boxes .box h4 b,
+        .blue-boxes .box h3 b,
+        .blue-boxes .box h2 b {display: inline-block;}
+        .blue-boxes .box:hover h4 b,
+        .blue-boxes .box:hover h3 b,
+        .blue-boxes .box:hover h2 b {animation: bounce 600ms linear;}
+        
+        .latest-news .columns {flex-wrap:wrap;}
+        .latest-news .columns > * {min-width:300px;}
+        .latest-news .more {margin-top:50px;text-align:center;}
+        
+        @keyframes bounce {
+          0% {transform: translateX(0px);}
+          25% {transform: translateX(10px);}
+          50% {transform: translateX(-2px);}
+          75% {transform: translateX(5px);}
+          100% {transform: translateX(0px);}
+        }
+
         @media (min-width: ${minWidth}) {
           [class*="-grid"] > .container div {
             min-width: 45%;
@@ -150,14 +214,6 @@ const Layout = ({ currentUrl, post, children, ...rest }) => {
           [class*="-grid-box"] > .container div {
             margin: 10px;
           }
-        }
-        
-        .Sections > div {
-          padding: 25px 0;
-        }
-        
-        .Sections > div .container h2:first-of-type {
-          margin-top: 0;
         }
         
         

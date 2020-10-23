@@ -1,5 +1,5 @@
 import Layout from './Layout'
-import { getPost } from '../utils'
+import { getPost, getBlogPosts } from '../utils'
 
 const Page = props => {
   return (
@@ -16,7 +16,8 @@ Page.getInitialProps = async context => {
     return { post: null, currentUrl }
 
   const post = await getPost(currentUrl)
-  return { post, currentUrl }
+  const blogPosts = await getBlogPosts(4, 0)
+  return { post, currentUrl, blogPosts}
 }
 
 export default Page
