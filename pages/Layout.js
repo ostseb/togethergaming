@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import DefaultErrorPage from 'next/error'
 import { fetchEntries, minWidth, getImage } from '../utils'
 import Hero from '../components/Hero'
 import Header from '../components/Header'
@@ -7,7 +8,15 @@ import Content from '../components/Content'
 import Sections from '../components/Sections'
 
 const Layout = ({ currentUrl, post, children, blogPosts, ...rest }) => {
-  if (!post) return null;
+  if (!post) {
+    return <>
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
+      <DefaultErrorPage statusCode={404} />
+    </>
+  }
+  
   return (
     <>
       <Head>
@@ -159,7 +168,7 @@ const Layout = ({ currentUrl, post, children, blogPosts, ...rest }) => {
         .clients-grid.columns > *:first-child {margin-left:50px;}
         .clients-grid.columns > *:last-child {margin-right:50px;}
         
-        .m {margin: 100px 0;}
+        .m {margin-top: 100px;margin-bottom: 100px;}
         .mt {margin-top: 100px;}
         .mb {margin-bottom: 100px;}
         
