@@ -25,22 +25,23 @@ const Footer = () => (
         <div className="column">
           <h4>Services</h4>
           <ul>
-            <li><Link href="/"><a>White Label</a></Link></li>
-            <li><Link href="/ir"><a>Turn Key</a></Link></li>
+            <li><Link href="/white-label"><a>White Label</a></Link></li>
+            <li><Link href="/turnkey"><a>Turnkey</a></Link></li>
             <li><Link href="/platform"><a>Platform</a></Link></li>
           </ul>
         </div>
         <div className="column">
           <h4>Legal</h4>
           <ul>
-            <li><Link href="/"><a>Privacy policy</a></Link></li>
-            <li><Link href="/platform"><a>Cookie policy</a></Link></li>
-            <li><Link href="/ir"><a>Information security</a></Link></li>
-            <li><Link href="/governance"><a>Legal disclaimer</a></Link></li>
+            <li><Link href="/privacy-policy"><a>Privacy policy</a></Link></li>
+            <li><Link href="/cookie-policy"><a>Cookie policy</a></Link></li>
+            <li><Link href="/information-security"><a>Information security</a></Link></li>
+            <li><Link href="/legal-disclaimer"><a>Legal disclaimer</a></Link></li>
           </ul>
         </div>
         <div className="column">
           <h4>Social</h4>
+          <li><Link href="https://www.linkedin.com/company/together-gaming-ltd-/"><a>LinkedIn</a></Link></li>
         </div>
       </div>
     </nav>
