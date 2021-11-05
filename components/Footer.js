@@ -20,6 +20,7 @@ const Footer = () => (
             <li><Link href="/governance"><a>Governance</a></Link></li>
             <li><Link href="/press"><a>Press</a></Link></li>
             <li><Link href="/contact"><a>Contact</a></Link></li>
+            <li><Link href="https://togethergaming.bamboohr.com/jobs/" target="_blank"><a>Careers</a></Link></li>
           </ul>
         </div>
         <div className="column">
