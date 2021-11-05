@@ -10,6 +10,7 @@ const Footer = () => (
       <Link href="/governance"><a>Governance</a></Link>
       <Link href="/press"><a>Press</a></Link>
       <Link href="/contact"><a>Contact</a></Link>
+      <a href="https://togethergaming.bamboohr.com/jobs/" target="_blank">Careers</a>
     </nav>
     <div className="columns-wrap">
       <div className="columns">
