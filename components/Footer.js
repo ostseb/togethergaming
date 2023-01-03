@@ -41,8 +41,8 @@ const Footer = () => (
       </div>
     </div>
     <div className="container copyright">
-      <p>This website www.togethergaming.com, is operated by Together Gaming Solutions P.L.C., a Company registered in Malta and licenced in the European Union having company registration number C72231 and a registered office at Triq   Paceville Avenue no. 6, St Julians STJ 3109, Malta. Together Gaming Solutions P.L.C. is operating under the following license, issued by MGA (Malta Gaming Authority): MGA/B2B/593/2018 granted as of the 29th April 2019.</p>
-      <p>2019 All rights reserved. TogetherGaming.com</p>
+      <p>This website www.togethergaming.com, is operated by Together Gaming Solutions P.L.C., a Company registered in Malta and licenced in the European Union having company registration number C72231 and a registered office at Mezzanine Office, The George, Triq Ball, St Julians  STJ 3123, Malta. Together Gaming Solutions P.L.C. is operating under the following license, issued by MGA (Malta Gaming Authority): MGA/B2B/593/2018 granted as of the 29th April 2019.</p>
+      <p>2023 All rights reserved. TogetherGaming.com</p>
     </div>
     <style jsx>{`
       .Footer {
