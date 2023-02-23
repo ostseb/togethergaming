@@ -1,7 +1,7 @@
 import Layout from './Layout'
 import { fetchEntries } from '../utils'
 
-const host = 'https://www.togethergaming.com';
+const host = 'https://www.togethergamingsolutions.com';
 const sitemapSection = page => `
   <url>
     <loc>${host}/${page.fields.url === '/' ? '' : page.fields.url}</loc>
