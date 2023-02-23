@@ -6,7 +6,6 @@ module.exports = {
   },
 
   async redirects() {
-    console.log('okok')
     return [
       {
         source: '/:path*',
