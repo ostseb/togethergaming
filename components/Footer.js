@@ -8,6 +8,7 @@ const Footer = () => (
       <Link href="/platform"><a>Platform</a></Link>
       <Link href="/ir"><a>Investors</a></Link>
       <Link href="/governance"><a>Governance</a></Link>
+      <Link href="/policy"><a>Privacy & Cookie Policy</a></Link>
       <Link href="/press"><a>Press</a></Link>
       <Link href="/contact"><a>Contact</a></Link>
       <a href="https://togethergaming.bamboohr.com/jobs/" target="_blank">Careers</a>
