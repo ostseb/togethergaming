@@ -16,7 +16,7 @@
     "@contentful/rich-text-plain-text-renderer": "^13.4.0",
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^13.4.0",
-    "contentful": "^7.13.1",
+    "contentful": "^9.3.3",
     "lodash": "^4.17.20",
     "next": "^10.2.3",
     "react": "^16.12.0",
