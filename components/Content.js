@@ -1,9 +1,11 @@
-import { renderRichFormat } from '../utils'
+import Markdown from './Markdown';
 
 const Content = ({ content, type, createdAt }) => (
   <div className="container">
     { type && type.includes('blogEntry') && <time dateTime={createdAt}>{ Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeStyle: 'short'}).format(new Date(createdAt)) }</time> }
-    { renderRichFormat(content) }
+    <Markdown>
+      {content}
+    </Markdown>
     <style jsx>{`
       time {
         transform: translateY(1.3rem);

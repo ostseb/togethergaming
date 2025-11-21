@@ -1,10 +1,13 @@
-import { renderRichFormat, minWidth, getImage } from '../utils'
+import { minWidth, getImage } from '../utils'
+import Markdown from './Markdown';
 
 const Hero = ({ content, media, fullscreen = false }) => (
   <div className={`Hero ${fullscreen && 'fullscreen'}`}>
     <div className="wrap">
       <div className="container">
-        { renderRichFormat(content) }
+          <Markdown>
+            {content}
+          </Markdown>
         { fullscreen && <img alt="Continue" src="/down.svg" /> }
       </div>
     </div>
