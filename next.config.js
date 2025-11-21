@@ -1,8 +1,10 @@
 module.exports = {
   target: 'server',
   env: {
-    "CONTENTFUL_SPACE_ID": "qeqapgmln7mo",
-    "CONTENTFUL_ACCESS_TOKEN": "gU0mqo9cQIB5furjRxJuN2CN7ExHdoDuFkICnVAgSL4"
+    "CONTENT_HOST":"https://preview.objectic.io",
+    "CONTENT_SPACE":"euvPvnHAM4aJ",
+    "CONTENT_ENVIRONMENT":"master",
+    "CONTENT_TOKEN":"kGyfW8kyTL2nb2l5wsKew2d3IEBDNbSBiMNpMpto1ff98625"
   },
   async redirects() {
     return [
