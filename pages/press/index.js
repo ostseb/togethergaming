@@ -1,18 +1,20 @@
 import Layout from '../Layout'
-import { getPost, renderRichFormat, getBlogPosts, getImage } from '../../utils'
+import { getPost, getBlogPosts, getImage } from '../../utils'
 import Link from 'next/link'
 import { useState } from 'react'
+import removeMarkdown from 'remove-markdown';
+
 const l = 8;
 const Card = ({ media, content, url, focus = 'faces', createdAt }) => {
-  const plainText = renderRichFormat(content, true).substr(0,140)
+  const plainText = removeMarkdown(content).substring(0, 140);
   return (
     <Link href={url}>
       <div className="Card">
         <header />
         <div>
           { createdAt && <time dateTime={createdAt}>{ Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeStyle: 'short'}).format(new Date(createdAt)) }</time> }
-          { plainText }
-          { plainText.length === 140 && '...' }
+            { plainText }
+            { plainText.length === 140 && '...' }
         </div>
         <a>Read the full story</a>
         <style jsx>{`
