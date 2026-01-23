@@ -79,6 +79,7 @@ export const getBlogPosts = async (limit = 10, skip = 0) => {
   const posts = await fetchEntries({
     content_type: 'post',
     'fields.type[match]': 'blogEntry',
+    order: '-sys.createdAt',
     limit,
     skip,
   })
